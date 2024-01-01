@@ -11,4 +11,4 @@ You can find the list of problems in the [Top SQL 50 LeetCode Study Plan](https:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/top-sql-50-leetcode.git
+git clone https://github.com/pyaidev/top-sql-50-leetcode.git
