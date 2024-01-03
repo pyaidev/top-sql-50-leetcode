@@ -1,0 +1,6 @@
+SELECT product_name,
+       year,
+       price 
+FROM   Product prd
+INNER JOIN Sales sals
+       on sals.product_id=prd.product_id
