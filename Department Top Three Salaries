@@ -1,0 +1,9 @@
+select d.name as Department, e.name as Employee, salary as Salary
+from employee e
+join department d on d.id = e.departmentId
+where (salary, departmentId) in (with cte1 as (
+select salary, departmentId, row_number() over(partition by departmentId order by salary desc) as c
+from employee
+group by salary, departmentId
+order by departmentId, salary desc)
+select salary, departmentId from cte1 where c <= 3)
